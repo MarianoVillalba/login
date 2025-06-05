@@ -1,0 +1,131 @@
+/* Reset básico y centrado total */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #007BFF, #00C6FF);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Animación suave de aparición */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.form-box {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 30px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  animation: fadeInScale 0.5s ease forwards;
+}
+
+/* Form más pequeño y centrado */
+form {
+  max-width: 200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Título */
+h2 {
+  margin-bottom: 20px;
+  color: #222;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+/* Inputs más compactos */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Botón full width */
+input[type="submit"] {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #007BFF, #00C6FF);
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 198, 255, 0.5);
+  transition: background 0.4s ease, transform 0.2s ease, box-shadow 0.4s ease;
+  user-select: none;
+}
+
+input[type="submit"]:hover {
+  background: linear-gradient(45deg, #0056b3, #0099cc);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 153, 204, 0.7);
+}
+
+input[type="submit"]:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.6);
+}
+
+/* Mensaje de alerta */
+.mensaje {
+  margin-top: 22px;
+  padding: 14px;
+  border-radius: 8px;
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1.5px solid #ffeeba;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(255, 235, 59, 0.4);
+  animation: fadeInScale 0.5s ease forwards;
+}
+
+/* Código del token */
+code {
+  display: block;
+  text-align: left;
+  background: #f9f9f9;
+  color: #333;
+  padding: 15px;
+  border-radius: 25px;
+  word-break: break-word;
+  font-size: 14px;
+  margin-top: 20px;
+  box-shadow: inset 0 0 8px #ddd;
+  font-family: 'Courier New', Courier, monospace;
+}
